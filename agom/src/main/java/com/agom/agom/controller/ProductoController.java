@@ -40,7 +40,7 @@ public class ProductoController {
     }
 
     @GetMapping("/byname")
-    public ResponseEntity<Producto> getProductoById(@RequestParam String nombre) {
+    public ResponseEntity<Producto> getProductoByName(@RequestParam String nombre) {
         try {
             Producto producto = service.findByNombre(nombre);
             return new ResponseEntity<>(producto, HttpStatus.OK);
